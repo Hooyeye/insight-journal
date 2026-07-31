@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: insight-journal
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@example.com
+      - key: ADMIN_PASSWORD
+        generateValue: true
+    disk:
+      name: blog-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1

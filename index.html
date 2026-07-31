@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Insight Journal - thoughtful stories about technology, business and modern life." />
+  <title>Insight Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#/">Insight<span>Journal</span></a>
+      <button id="menuButton" class="menu-button" aria-label="Open menu">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="#/">Home</a>
+        <a href="#/explore">Explore</a>
+        <a href="#/about">About</a>
+        <a id="dashboardLink" class="hidden" href="#/dashboard">Dashboard</a>
+        <button id="authButton" class="button button-small">Sign in</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#/">Insight<span>Journal</span></a>
+        <p>Ideas, stories and practical knowledge for curious readers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#/explore">Latest stories</a>
+        <a href="#/about">About us</a>
+        <a href="#/dashboard">Write a post</a>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Get the best stories in your inbox.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="Email address" required />
+          <button class="button" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="year"></span> Insight Journal. All rights reserved.</div>
+  </footer>
+
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
